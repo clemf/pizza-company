@@ -14,19 +14,19 @@
 
     <div class="container">
 
-      <form>
+      <form id="pizza-order">
         <div class="form-group">
           <label for="size" class="sr-only">Pizza Size in inches</label>
           <input type="number" id="size" class="form-control" placeholder="Pizza size in inches">
         </div>
         <div class="form-group">
-          <select class="form-control">
+          <select class="form-control" id="topping">
             <option selected>Choose a topping...</option>
-            <option>Cheese</option>
-            <option>Pepperoni</option>
+            <option value="cheese">Cheese</option>
+            <option value="pepperoni">Pepperoni</option>
           </select>
         </div>
-          <button class="btn btn-default">Order Pizza</button>
+          <button class="btn btn-default" type="submit">Order Pizza</button>
       </form>
     </div>
 

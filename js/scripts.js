@@ -23,3 +23,13 @@ var Pizza = {
   }
 
 };
+
+$("form#pizza-order").submit(function(event) {
+  var pizzaOrder = Object.create(Pizza);
+  pizzaOrder.setDiameter(parseFloat($("input#size").val()));
+  pizzaOrder.setTopping($("select#topping").val());
+
+  alert(pizzaOrder.diameter + " " + pizzaOrder.topping + " " + pizzaOrder.slices());
+
+  event.preventDefault();
+});
