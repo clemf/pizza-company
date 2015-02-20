@@ -6,6 +6,12 @@ var Pizza = {
 
   setTopping: function(toppingInput) {
     this.topping = toppingInput;
+  },
+
+  slices: function() {
+    if (this.diameter >= 16) {
+      return 16;
+    }
   }
 
 };
