@@ -1,5 +1,11 @@
 var Pizza = {
-  setSize: function(sizeInput) {
-    this.size = sizeInput;
+
+  setDiameter: function(diameterInput) {
+    this.diameter = diameterInput;
+  },
+
+  setTopping: function(toppingInput) {
+    this.topping = toppingInput;
   }
+
 };
