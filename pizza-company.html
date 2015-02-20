@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" src="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title>Pizza Company</title>
   </head>
   <body>
@@ -13,7 +13,21 @@
     </div>
 
     <div class="container">
-      
+
+      <form>
+        <div class="form-group">
+          <label for="size" class="sr-only">Pizza Size in inches</label>
+          <input type="number" id="size" class="form-control" placeholder="Pizza size in inches">
+        </div>
+        <div class="form-group">
+          <select class="form-control">
+            <option selected>Choose a topping...</option>
+            <option>Cheese</option>
+            <option>Pepperoni</option>
+          </select>
+        </div>
+          <button class="btn btn-default">Order Pizza</button>
+      </form>
     </div>
 
     <script src="js/jquery-1.11.2.js"></script>
