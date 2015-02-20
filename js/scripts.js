@@ -24,12 +24,17 @@ var Pizza = {
 
 };
 
+$("#results").hide();
+
 $("form#pizza-order").submit(function(event) {
   var pizzaOrder = Object.create(Pizza);
   pizzaOrder.setDiameter(parseFloat($("input#size").val()));
   pizzaOrder.setTopping($("select#topping").val());
 
-  alert(pizzaOrder.diameter + " " + pizzaOrder.topping + " " + pizzaOrder.slices());
+  $("#list-size").text(pizzaOrder.diameter);
+  $("#list-topping").text(pizzaOrder.topping);
+  $("#list-slices").text(pizzaOrder.slices());
+  $("#results").show("slow");
 
   event.preventDefault();
 });
