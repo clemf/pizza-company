@@ -12,4 +12,10 @@ describe('Pizza', function() {
     expect(testPizza.topping).to.equal("pepperoni");
   });
 
+  it('returns the correct number of slices for a 16" pizza', function() {
+    var testPizza = Object.create(Pizza);
+    testPizza.setDiameter(16);
+    expect(testPizza.slices()).to.equal(16);
+  });
+  
 });
