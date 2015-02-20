@@ -27,14 +27,25 @@ var Pizza = {
 $("#results").hide();
 
 $("form#pizza-order").submit(function(event) {
-  var pizzaOrder = Object.create(Pizza);
-  pizzaOrder.setDiameter(parseFloat($("input#size").val()));
-  pizzaOrder.setTopping($("select#topping").val());
+  var orderSize = parseFloat($("input#size").val());
+  var orderTopping = $("select#topping").val();
 
-  $("#list-size").text(pizzaOrder.diameter);
-  $("#list-topping").text(pizzaOrder.topping);
-  $("#list-slices").text(pizzaOrder.slices());
-  $("#results").show("slow");
+  if (orderSize <= 0) {
+    alert("You must enter a size greater than 0!");
+  } else if (isNaN(orderSize)) {
+    alert("You must enter a size!");
+  } else if (orderTopping.match(/Choose/)) {
+    alert("You must select a topping!");
+  } else {
+    var pizzaOrder = Object.create(Pizza);
+    pizzaOrder.setDiameter(orderSize);
+    pizzaOrder.setTopping(orderTopping);
+
+    $("#list-size").text(pizzaOrder.diameter);
+    $("#list-topping").text(pizzaOrder.topping);
+    $("#list-slices").text(pizzaOrder.slices());
+    $("#results").show("slow");
+  }
 
   event.preventDefault();
 });
