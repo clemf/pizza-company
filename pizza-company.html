@@ -14,20 +14,35 @@
 
     <div class="container">
 
-      <form id="pizza-order">
-        <div class="form-group">
-          <label for="size" class="sr-only">Pizza Size in inches</label>
-          <input type="number" id="size" class="form-control" placeholder="Pizza size in inches">
+        <form id="pizza-order">
+          <div class="form-group">
+            <label for="size" class="sr-only">Pizza Size in inches</label>
+            <input type="number" id="size" class="form-control" placeholder="Pizza size in inches">
+          </div>
+          <div class="form-group">
+            <select class="form-control" id="topping">
+              <option selected>Choose a topping...</option>
+              <option value="Cheese">Cheese</option>
+              <option value="Pepperoni">Pepperoni</option>
+            </select>
+          </div>
+            <button class="btn btn-default" type="submit">Order Pizza</button>
+        </form>
+
+      <br>
+
+        <div class="jumbotron">
+          <h2>Your Pizza Order:</h2>
+          <div class="list-group">
+            <h4 class="list-group-item-heading">Size</h4>
+            <p class="list-group-item-text"><span id="list-size"></span> inches.</p>
+            <h4 class="list-group-item-heading">Topping</h4>
+            <p class="list-group-item-text" id="list-size"><span id="list-topping"></span>.</p>
+            <h4 class="list-group-item-heading">Number of Slices</h4>
+            <p class="list-group-item-text"><span id="list-slices"></span>.</p>
+          </div>
         </div>
-        <div class="form-group">
-          <select class="form-control" id="topping">
-            <option selected>Choose a topping...</option>
-            <option value="cheese">Cheese</option>
-            <option value="pepperoni">Pepperoni</option>
-          </select>
-        </div>
-          <button class="btn btn-default" type="submit">Order Pizza</button>
-      </form>
+
     </div>
 
     <script src="js/jquery-1.11.2.js"></script>
